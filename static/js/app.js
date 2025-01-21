@@ -45,7 +45,8 @@ function buildCharts(sample) {
     mode: 'markers',
     marker: {
       size: sample_values,
-      color: otu_ids
+      color: otu_ids,
+      colorscale: 'Portland'
       }   
      };
   
@@ -77,7 +78,9 @@ let yticks = otu_ids.map(otuID => `OTU ${otuID}`).reverse();
       margin: {
         t: 30,
         l: 150
-      }
+      },
+      xaxis: {title: 'Number of Bacteria'},
+      yaxis: {title: 'OTU ID'}
     }
 
     // Render the Bar Chart
